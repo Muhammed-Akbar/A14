@@ -15,14 +15,14 @@
             var expires = "expires=" + d.toGMTString();
             // you need the spage after each name/value pair
             var myCookie = cname + "=" + cvalue + "; " + expires + "; path=/";
-            document.write(' 3) The Value of myCookie is ' + myCookie+'<br/>');
+            //document.write(' 3) The Value of myCookie is ' + myCookie+'<br/>');
             document.cookie = myCookie;
         }
         function getCookie(cname) {
             var name = cname + "=";
             var decodedCookie = decodeURIComponent(document.cookie);
             var ca = decodedCookie.split(';');
-            document.write(' 2) The Value of name is ' + name);
+            //document.write(' 2) The Value of name is ' + name);
             for(var i = 0; i < ca.length; i++) {
                 var c = ca[i];
                 while (c.charAt(0) == ' ') {
@@ -36,7 +36,7 @@
         }
         function checkCookie() {
             var user=getCookie("username");
-            document.write(' 1) The Value of user is ' + user);
+            //document.write(' 1) The Value of user is ' + user);
             if (user != "") {
                 alert("Welcome again " + user);
             } else {
